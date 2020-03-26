@@ -1,0 +1,9 @@
+.msgBox{
+    height: 70vh;
+    overflow-y:scroll;
+    margin: auto;
+    width: 50%;
+    padding-top: 10px;
+    margin-bottom: 0;
+    
+}

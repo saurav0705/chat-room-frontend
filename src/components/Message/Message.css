@@ -1,0 +1,30 @@
+.user{
+    background-color: mediumslateblue;
+    color:white;
+    align-self: right;
+}
+
+.message{
+    padding: 10px;
+    border-radius: 20px;
+    margin:5px;
+    max-width: 500px;
+    
+}
+
+.other{
+    align-self: left;
+    background-color: mediumorchid;
+    color: white;
+}
+.author{
+    font-size: small;
+    padding: 20px;
+}
+
+.admin{
+    background-color: lightslategray;
+}
+p{
+    padding: 0;
+}
