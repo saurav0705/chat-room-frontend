@@ -4,7 +4,7 @@ const Message = ({message,name}) => {
     return (
         <div className="block">
             {
-                message.user.toLowerCase() === name 
+                message.user === name 
                 ?
            
                 <div  className="message user">

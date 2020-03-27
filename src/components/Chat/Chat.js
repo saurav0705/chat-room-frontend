@@ -46,11 +46,7 @@ const Chat = ({location}) => {
             setUsers(users);
           });
 
-          return () => {
-            socket.emit('disconnect',()=>{
-              console.log('disconnected');
-            })
-          }
+          
     },[])
     
     
