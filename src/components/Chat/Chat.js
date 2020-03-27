@@ -20,9 +20,9 @@ const Chat = ({location}) => {
 
 
     useEffect(() => {
-        // if(!localStorage.getItem('logged')){
-        //     history.push('/')
-        // }
+        if(!localStorage.getItem('logged')){
+            history.push('/')
+        }
         const { name, room } = queryString.parse(location.search);
     
         socket = io(ENDPOINT);

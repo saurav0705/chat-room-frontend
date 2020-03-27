@@ -15,8 +15,14 @@ ul {
     float: left;
   }
   .name{
-      text-transform: capitalize;
-        font-size: 42px;
+      
+        font-size: 4vw;
+        color: white;
+        margin-left: 5px;
+        margin-right: 5px;
+        overflow-x: scroll;
+        text-transform: capitalize;
+        text-align: center;
   }
 .leave{
     color: white;
@@ -30,6 +36,7 @@ ul {
 }
   .room{
     margin-top: 10px;
+    font-size: 18px;
   }
   li{
     display: inline-block;
@@ -47,4 +54,17 @@ ul {
   .room-header{
       color: yellow;
       font-size: 18px;
+  }
+  .exit{
+    width: 10vw;
+    max-width: 40px;
+  }
+
+  @media only screen and (max-width: 500px) {
+     li{
+      display: block;
+    }
+    .name{
+      font-size: 4vh;
+    }
   }

@@ -5,7 +5,8 @@ const Infobar = ({room,name}) => {
     return (
         <div className="infobar">
         <ul>
-        <li className="name">{name}</li>
+        <div className="name">{name}</div>
+        
         <li className="room"><span className="room-header">ROOM</span><br/> {room}</li>
         <li className="right"><Link to="/" className="link"><img className="exit" src="/exit.png" height="40px"/></Link></li>
         </ul>
