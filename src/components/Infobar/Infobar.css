@@ -1,3 +1,50 @@
 .infobar{
-    height: 20%;
+  position: fixed; top: 0; left:0; width:100%;
+  z-index: 2;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+   
+  }
+  
+  li {
+    float: left;
+  }
+  .name{
+      text-transform: capitalize;
+        font-size: 42px;
+  }
+.leave{
+    color: white;
+}
+.link{
+    text-decoration: none;
+   
+}
+.exit{
+    margin-top: 10px;
+}
+  .room{
+    margin-top: 10px;
+  }
+  li{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .right{
+      float:right;
+  }
+  li a:hover {
+    background-color: #111;
+  }
+  .room-header{
+      color: yellow;
+      font-size: 18px;
+  }

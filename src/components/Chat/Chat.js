@@ -4,6 +4,7 @@ import io from "socket.io-client";
 import Input from "../Input/Input";
 import Messages from '../Messages/Messages';
 import Infobar from '../Infobar/Infobar';
+import { useHistory } from "react-router-dom";
 import './Chat.css';
 
 let socket;
@@ -14,10 +15,14 @@ const Chat = ({location}) => {
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
-    const ENDPOINT = "https://chatroom98.herokuapp.com/"
+    const ENDPOINT = "https://chatroom98.herokuapp.com/";
+    let history = useHistory();
 
 
     useEffect(() => {
+        // if(!localStorage.getItem('logged')){
+        //     history.push('/')
+        // }
         const { name, room } = queryString.parse(location.search);
     
         socket = io(ENDPOINT);

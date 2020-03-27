@@ -2,15 +2,27 @@ import React from 'react';
 import './Message.css'
 const Message = ({message,name}) => {
     return (
-        <div>
+        <div className="block">
             {
-                message.user === name 
+                message.user.toLowerCase() === name 
                 ?
-            <div >
-                <h3 className="user message">{message.text}<p align="right" className="author"><sub></sub>{message.user}</p></h3></div>
+           
+                <div  className="message user">
+                 <div className="sender">{message.user}</div>
+                 <div className="message-text user-msg">{message.text}</div>
+                
+                </div>
+                
+           
                 :
-                <div><h3  className={message.user.toLowerCase() === 'admin' ?"admin message":"other message"}>{message.text}<p align="right" className="author">{message.user.toLowerCase()}</p></h3></div>
+                <div  className={message.user.toLowerCase() === 'admin' ?"admin message":"other message"}>
+                    <div  className={message.user.toLowerCase() === 'admin' ?"admin message-text":"other message-text other-msg"}>{message.text}</div>
+                    {message.user.toLowerCase() === 'admin' ? null:
+                    <div className="sender">{message.user}</div>}    
+                </div>
             }
+           
+            
         </div>
 
     )
