@@ -25,6 +25,7 @@
     padding-right : 8px;
     border-radius: 10px;
     box-sizing: content-box;
+    max-width: 60vw;
 }
 
 .user-msg{
@@ -40,6 +41,7 @@
 }
 .sender{
     margin: 2px;
+    max-width: 10vw;
 }
 .other{
     

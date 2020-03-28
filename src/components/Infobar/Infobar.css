@@ -8,11 +8,42 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    
    
   }
   
   li {
     float: left;
+  }
+  .member-text{
+    margin: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    transition-duration: 200ms;
+    padding:10px;
+    margin-bottom: 0;
+  }
+
+  .member-text:hover{
+    background-color: black;
+  }
+
+  .list{
+    background-color: black;
+    opacity: 1;
+    display: none;
+    z-index: 20;
+    position: absolute;
+    margin-top:0;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: large;
+    text-transform: capitalize;
+  }
+
+  .Members:hover .list{
+    display: block;
   }
   .name{
       

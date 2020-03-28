@@ -20,15 +20,15 @@ const Chat = ({location}) => {
 
 
     useEffect(() => {
-        if(!localStorage.getItem('logged')){
-            history.push('/')
-        }
+        // if(!localStorage.getItem('logged')){
+        //     history.push('/')
+        // }
         const { name, room } = queryString.parse(location.search);
     
         socket = io(ENDPOINT);
     
-        setRoom(room);
-        setName(name)
+        setRoom(room.trim().toLowerCase());
+        setName(name.trim().toLowerCase())
     
         socket.emit('join', { name, room }, (error) => {
           if(error) {
@@ -45,7 +45,7 @@ const Chat = ({location}) => {
           socket.on("roomData", ({ users }) => {
             setUsers(users);
           });
-
+          console.log(users);
           
     },[])
     
@@ -60,7 +60,7 @@ const Chat = ({location}) => {
     
     return(
         <div className="chatBox">
-            <Infobar room={room} name = {name}/>
+            <Infobar room={room} name = {name} users={users}/>
             <Messages messages={messages} name={name}/>
             <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
         </div>
