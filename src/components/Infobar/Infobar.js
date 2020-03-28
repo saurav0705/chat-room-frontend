@@ -8,7 +8,7 @@ const Infobar = ({room,name,users}) => {
         <ul>
         <div className="name">{name}</div>
         
-        <li className="room"><span className="room-header">ROOM</span><br/> {room}</li>
+        <li className="room"><span className="room-header">ROOM</span><br/><span className="room-text"> {room}</span></li>
         <li className="Members">
             <div className="member-text">Members</div>
             <div className="list"><Members users={users}/></div>

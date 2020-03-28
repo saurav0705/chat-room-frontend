@@ -68,7 +68,12 @@ ul {
   .room{
     margin-top: 10px;
     font-size: 18px;
+    max-width: 10vw;
+    overflow-y: scroll;
   }
+
+  
+  
   li{
     display: inline-block;
     color: white;
@@ -98,4 +103,13 @@ ul {
     .name{
       font-size: 4vh;
     }
+  }
+
+  .room::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE and Edge */
+  .room {
+    -ms-overflow-style: none;
   }
