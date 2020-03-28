@@ -3,7 +3,9 @@
   width: 50vh;
   padding: 10px;
 }
-
+.flex{
+    display: flex;
+}
 .join{
     width: 100%;
     /* overflow-x: hidden; */
@@ -16,6 +18,25 @@
   border-radius: 30px;
 }
 
+.available{
+    color: white;
+    background-image: linear-gradient(#3399ff,transparent);
+    border-radius: 8px;
+    padding: 10px;
+    
+}
+.available h1{
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+.alive-rooms{
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    background-color: #0033cc;
+    border-radius: 10px;
+}
 .disabled{
     cursor-pointer:not-allowed ;
     background-color: #3399ff;
@@ -65,3 +86,12 @@ opacity: 1;
     color: whitesmoke;
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: 600px) {
+    .flex{
+        display: block;
+    }
+    .available{
+        margin-top: 20px;
+    }
+  }
